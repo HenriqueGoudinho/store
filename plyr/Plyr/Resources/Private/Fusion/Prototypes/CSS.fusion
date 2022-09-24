@@ -1,0 +1,10 @@
+prototype(Jonnitto.Plyr:CSS) <  prototype(Carbon.IncludeAssets:File) {
+    file = ${Configuration.setting('Jonnitto.Plyr.include.css.file')}
+    assetPackage = ${Configuration.setting('Jonnitto.Plyr.include.css.assetPackage')}
+    assetPath = ${Configuration.setting('Jonnitto.Plyr.include.css.assetPath')}
+
+    @if {
+        includeCSS = ${this.file}
+        includeCase = Jonnitto.Plyr:IncludeCase
+    }
+}

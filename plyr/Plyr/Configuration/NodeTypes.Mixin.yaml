@@ -1,0 +1,57 @@
+'Jonnitto.Plyr:Content':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    group: multimedia
+    inlineEditable: true
+    inspector:
+      groups:
+        settings:
+          label: i18n
+          position: 20
+          icon: icon-cog
+
+'Jonnitto.Plyr:FileMixin':
+  abstract: true
+  superTypes:
+    'Jonnitto.Plyr:Content': true
+  properties:
+    files:
+      type: array<Neos\Media\Domain\Model\Asset>
+      validation:
+        Neos.Neos/Validation/NotEmptyValidator: []
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 100
+
+'Jonnitto.Plyr:IdMixin':
+  abstract: true
+  superTypes:
+    'Jonnitto.Plyr:Content': true
+  properties:
+    id:
+      type: string
+      ui:
+        label: i18n
+        reloadPageIfChanged: true
+        inlineEditable: false
+        inspector:
+          editor: Neos.Neos/Inspector/Editors/TextAreaEditor
+          group: settings
+          position: 100
+
+'Jonnitto.Plyr:ImageMixin':
+  abstract: true
+  properties:
+    image:
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: settings
+          position: 200

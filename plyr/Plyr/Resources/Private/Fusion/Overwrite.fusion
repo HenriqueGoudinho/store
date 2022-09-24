@@ -1,0 +1,9 @@
+prototype(Neos.Neos:Page) {
+  plyrHead = Jonnitto.Plyr:CSS {
+    @position = 'before closingHeadTag'
+  }
+
+  plyrBody = Jonnitto.Plyr:Javascript {
+    @position = 'before closingBodyTag'
+  }
+}

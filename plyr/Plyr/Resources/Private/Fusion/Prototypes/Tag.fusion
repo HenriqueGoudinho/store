@@ -1,0 +1,53 @@
+prototype(Jonnitto.Plyr:Tag) < prototype(Neos.Fusion:Tag) {
+    node = ${node}
+    id = null
+    media = null
+    editable = true
+    key = Neos.Fusion:Case {
+        isYoutube {
+            condition = ${q(node).is('[instanceof Jonnitto.Plyr:YouTube]')}
+            renderer = 'youtube'
+        }
+        isVimeo {
+            condition = ${q(node).is('[instanceof Jonnitto.Plyr:Vimeo]')}
+            renderer = 'vimeo'
+        }
+        isAudio {
+            condition = ${q(node).is('[instanceof Jonnitto.Plyr:Audio]')}
+            renderer = 'audio'
+        }
+        isVideo {
+            condition = ${q(node).is('[instanceof Jonnitto.Plyr:Video]')}
+            renderer = 'video'
+        }
+    }
+
+    @context.props = ${this}
+
+    attributes.class = Neos.Fusion:DataStructure {
+        plyrContainer = 'jonnitto-plyr-container'
+        key = ${'jonnitto-plyr-' + props.key}
+        container = ${Configuration.setting('Jonnitto.Plyr.container')}
+    }
+
+    @if.render = ${this.id || this.media || node.context.inBackend ? true : false}
+
+    content = Neos.Fusion:Tag {
+        attributes.class = Neos.Fusion:DataStructure {
+            plyr = 'neos-plyr'
+        }
+    }
+    content.@process.notification = Carbon.Notification:Backend {
+        @if.render = ${props.id || props.media ? false : true}
+        type = 'alert'
+        content = ${Translation.translate('backendAlert.' + props.key, null, [], 'Main', 'Jonnitto.Plyr') }
+    }
+
+    @process.contentElementWrapping {
+        @if.editable = ${props.editable}
+        expression = Neos.Neos:ContentElementWrapping
+        @position = 'end 999999999'
+    }
+
+    @exceptionHandler = 'Neos\\Neos\\Fusion\\ExceptionHandlers\\NodeWrappingHandler'
+}
