@@ -20,6 +20,7 @@ $(document).ready(function(){
     
     });
 
+
     $(".thumbnails").owlCarousel({
         loop:true,
         margin: 10,
@@ -53,4 +54,14 @@ $(document).ready(function(){
     $('#btn-news-prev').click(function() {
         owl.trigger('prev.owl.carousel', [300]);
     })
+    
+    $("#page-up").click(function(event){
+
+        $('html, body').animate({
+            scrollTop: 0
+        }, 'slow');
+
+ 
+    });
+
 });
