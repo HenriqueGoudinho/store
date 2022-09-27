@@ -417,3 +417,6 @@ video {
 	display: none;
 }
 
+.page-up {
+	display: none !important;	
+}
