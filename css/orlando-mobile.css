@@ -13,7 +13,12 @@
 
     header #logotipo {
         left: 35%;
-        z-index: 6;
+        z-index: 10;
+        transition: 1s;
+    }
+
+    header.open-menu #logotipo{
+        transform: rotate(360deg);
     }
 
     #btn-bars, #btn-search {
@@ -233,6 +238,7 @@
         position: fixed;
         top: 0;
         width: 100%;
+        z-index: 9;
     }
 
     footer .page-up {
@@ -271,4 +277,62 @@
         height: 76px;
         left: calc(40% - 33px);
     }
+
+    header.open-menu #menu-mobile ul{
+        margin: 20px;
+        margin-top: 100px;
+    }
+
+    header.open-menu #menu-mobile li {
+        text-align: center;
+        border-top: #CCC 1px solid;
+        
+    }
+    header.open-menu #menu-mobile li:last-child{
+        border-bottom: #CCC 1px solid;
+    }
+
+    header.open-menu #menu-mobile a {
+        color: #633392;
+        font-family: "OpenSan";
+        font-weight: bold;
+        font-size: 16px;
+        padding: 18px;
+        display: block;
+    }
+
+    header.open-menu .bar-close{
+        position: absolute;
+        bottom: 40px;
+        background-color: #633392;
+        height: 40px;
+        width: 100%;
+    }
+
+    header.open-menu .bar-close .btn-close{
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 22px;
+    }
+    
+	header #input-search-mobile {
+		transition: 1s;
+		top: -40px;
+		position: fixed;
+		width: 70%;
+		left: 15%;
+		background-color: #000;
+		border: none;
+		height: 40px;
+		color: #fff;
+		outline: 0;
+	}
+	header.open-search #input-search-mobile {		
+		top: 0;
+	}
+	header.open-search #logotipo {
+		z-index: 9;
+	}
+
 }
