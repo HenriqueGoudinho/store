@@ -81,7 +81,6 @@
 						<time>December 21, s2018</time>
 					</div>
 				</div>
-			
 			</div>
 		</div>
 
@@ -107,6 +106,7 @@
 							<h2>American club number one in Brazil</h2>
 							<hr>
 						</div>
+						
 					
 						<div class="row">
 							<p>adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et delore magnam aliquam quaerat volup tatem. Uteni ad minima veniam, quis nostrum sed quia non numquam eius modi tempora incidunt ut. quia non numquam eius numquam eius modi temp modi tempora incidunt ut labore et dolore m</p>
@@ -114,7 +114,7 @@
 						<div class="text-center">
 							<div class="row row-max-400">
 								<div class="col-xs-6">	
-									<a href="#" class="btn btn-roxo">Shop</a>
+									<a href="shop" class="btn btn-roxo">Shop</a>
 								</div>
 									<div class="col-xs-6">
 									<a href="#" class="btn btn-amarelo">Register</a>

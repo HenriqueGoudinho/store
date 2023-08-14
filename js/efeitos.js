@@ -20,10 +20,14 @@ $(document).ready(function(){
     
     });
 
-
-    $(".thumbnails").owlCarousel({
+    //Carousel Noticias
+    var owl = $('.thumbnails');
+    owl.owlCarousel({
         loop:true,
         margin: 10,
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplayHoverPause:true,
         nav:true,
         navText: ["Anterior", "Próximo"],
         responsive: {
@@ -45,23 +49,41 @@ $(document).ready(function(){
         }
     }); 
 
-    var owl = $('.owl-carousel');
-    owl.owlCarousel();
-    
     $('#btn-news-next').click(function() {
-        owl.trigger('next.owl.carousel');
+       owl.trigger('next.owl.carousel');
     })
     $('#btn-news-prev').click(function() {
-        owl.trigger('prev.owl.carousel', [300]);
+       owl.trigger('prev.owl.carousel', [300]);
     })
     
+    //Carousel Shop 
+    var owlDestaque = $('#destaque-produtos');
+		
+    owlDestaque.owlCarousel({
+        items:2,
+        loop:true,
+        margin:10,
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplayHoverPause:true
+    });
+
+    $('#btn-destaque-next').click(function() {
+        owlDestaque.trigger('next.owl.carousel');
+    })
+
+    $('#btn-destaque-prev').click(function() {
+        owlDestaque.trigger('prev.owl.carousel', [300]);
+    })
+
+
+//Botão subir
+
     $("#page-up").click(function(event){
 
         $('html, body').animate({
             scrollTop: 0
         }, 'slow');
-
- 
     });
 
     $("#btn-bars").click(function(){
