@@ -14,7 +14,6 @@ $app->get(
         require_once("view/index.php");
     }
 );
-
 $app->get(
     '/videos',
     function () {
