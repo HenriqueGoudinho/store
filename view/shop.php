@@ -11,7 +11,7 @@
 				<div class="col-sm-6 col-imagem">
 					<img src="img/produtos/moto-x.png" alt="Nome do Produto">
 				</div>
-				
+
 				<div class="col-sm-6 col-descricao">
 					<h2>Smartphone Motorola Moto X Play Dual Chip Desbloqueado Andoid 5.1</h2>
 					<div class="box-valor">
@@ -56,7 +56,7 @@
 	<div id="promocoes" class="container">
 		<div class="row">
 			<div class="col-md-2">
-				<div class="box-promocao">
+				<div class="box-promocao box-1">
 					<p>Escolha por desconto</p>
 				</div>
 			</div>
@@ -84,7 +84,7 @@
 					<div class="col-md-3">
 						<div class="box-promocao">
 							<div class="text-ate">Até</div>
-							<div class="text-numero">70</div>
+							<div class="text-numero">80</div>
 							<div class="text-porcento">%</div>
 							<div class="text-off">Off</div>
 
@@ -93,7 +93,7 @@
 					<div class="col-md-3">
 						<div class="box-promocao">
 							<div class="text-ate">Até</div>
-							<div class="text-numero">80</div>
+							<div class="text-numero">85</div>
 							<div class="text-porcento">%</div>
 							<div class="text-off">Off</div>
 
