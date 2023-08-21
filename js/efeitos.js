@@ -77,6 +77,16 @@ $(document).ready(function () {
     })
 
 
+    //Estrelas avaliações raty
+    $('.estrelas').each(function () {
+        $(this).raty({
+            starHalf : 'lib/raty/lib/images/star-half.png',
+            starOff  : 'lib/raty/lib/images/star-off.png',
+            starOn   : 'lib/raty/lib/images/star-on.png',
+            score    : parseFloat($(this).data("score"))
+        });
+    })
+
     //Botão subir
 
     $("#page-up").click(function (event) {
